@@ -49,7 +49,7 @@ namespace ProducerConsumer_Scenario
             {
                 while (_buffer.Count < 10) // Kør så længe der er mindre end 10 elementer i kø / bufferen
                 {
-                    Thread.Sleep(new Random().Next(50, 300 + 1)); // Skab et random delay mellem 50 & 1000 ms (+1 fordi den går fra OG med, til IKKE MED)
+                    Thread.Sleep(new Random().Next(50, 300 + 1)); // Skab et random delay mellem 50 & 300 ms (+1 fordi den går fra OG med, til IKKE MED)
                     Monitor.Enter(_buffer); // Lås bufferen / Brug den som låse objekt
                     try
                     {
@@ -78,7 +78,7 @@ namespace ProducerConsumer_Scenario
         {
             while (true) // Kør forevigt
             {
-                Thread.Sleep(new Random().Next(50, 300 + 1)); // Sov tråden i x antal mx (50=>1000)
+                Thread.Sleep(new Random().Next(50, 300 + 1)); // Sov tråden i x antal mx (50=>300)
 
                 try
                 {
